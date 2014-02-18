@@ -1,0 +1,50 @@
+Exercise 1.1
+
+Below is a sequence of expressions. What is the result printed by the interpteter in response to each expression?
+Assume that the sequence is to be evaluated in the order in which it is presented.
+
+10
+user=> 10
+
+(+ 5 3 4)
+user=> 12
+
+(- 9 1)
+user=> 8
+
+(/ 6 2)
+user=> 3
+
+(+ (* 2 4) (- 4 6))
+user=> 6
+
+(define a 3)
+user=> nil
+
+(define b (+ a 1))
+user=> nil
+
+(+ a b (* a b))
+user=> 19
+
+(= a b)
+user=> #f
+
+(if (and (> b a) (< b (* a b)))
+  b
+  a)
+user=> 4
+
+(cond ((= a 4) 6)
+      ((= b 4) (+ 6 7 a))
+      (else 25))
+user=> 16
+
+(+ 2 (if (> b a) b a))
+user=> 6
+
+(* (cond ((> a b) a)
+         ((< a b) b)
+         (else -1))
+    (+ a 1))
+user=> 16
