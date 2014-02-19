@@ -1,0 +1,18 @@
+Exercise 1.4
+
+Observe that our model of evaluation allows for combinations whose operators are compound expressions.
+Use this observation to describe the behavior of the following procedure:
+
+(define (a-plus-abs-b a b)
+  ((if (> b 0) + -) a b))
+
+Given that b > 0,
+Then the expression (if (> b 0) + -) returns the + operator
+The + operator is used to form the new expression (+ a b)
+And the compound expression defined as 'a-plus-abs-b' returns the value a + b
+
+Given that b < 0,
+Then the expression (if (> b 0) + -) returns the - operator
+The - operator is used to form the new expression (- a b)
+And the compound expression defined as 'a-plus-abs-b' returns the value a - b
+
